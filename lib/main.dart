@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
-import 'package:httpreqflutter/note_page.dart';
-import 'package:httpreqflutter/post_page.dart';
-import 'package:httpreqflutter/provider_clas.dart';
+
+import 'package:httpreqflutter/provider_service.dart';
+import 'package:httpreqflutter/service_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => ProviderClass()),
+      ChangeNotifierProvider(create: (_) => ProviderService()),
     ],
       child: MyApp()
   ));
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      home: PostPage(),
+      home: ServiceCate(),
     );
   }
 }
